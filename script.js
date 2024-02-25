@@ -45,6 +45,14 @@ function playround(playerPick, computerPick){
     
 }
 
+function clear() {
+    const container2 = document.querySelector('#container2')
+    const child = container2.querySelectorAll('.one')
+
+    child.forEach((child) => container2.removeChild(child));
+}
+
+
 let userScore = 0;
 let computerScore = 0;
 let win;
@@ -57,27 +65,30 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+    if (rounds == 0) {clear()}
     playerPick = button.id;
     computerPick = getComputerChoice()
     rounds = ++rounds;
     
     (playround(playerPick, computerPick))
     
-    
-    const container = document.querySelector('#container')
+
     const container2 = document.querySelector('#container2')
 
     const yourScore = document.createElement('div')
     yourScore.textContent = "Your score is " + userScore + " - you chose " + playerPick
+    yourScore.className = "one"
     container2.appendChild(yourScore)
 
     
     const compScore = document.createElement('div')
     compScore.textContent = "Computer score is " + computerScore  + " - they chose " + computerPick
+    compScore.className = "one"
     container2.appendChild(compScore)
 
     const round = document.createElement('div')
-    round.textContent = "round " + rounds 
+    round.textContent = "round " + rounds
+    round.className = "one" 
     container2.appendChild(round)
 
     if (rounds === 5) {
@@ -98,6 +109,7 @@ buttons.forEach((button) => {
 
             const winner = document.createElement('h1')
             winner.textContent = result
+            winner.className = "one"
             container2.appendChild(winner)
 
             }
@@ -114,6 +126,7 @@ buttons.forEach((button) => {
 
             const winner = document.createElement('h1')
             winner.textContent = result
+            winner.className = "one"
             container2.appendChild(winner)
 
             }
@@ -130,9 +143,17 @@ buttons.forEach((button) => {
 
             const winner = document.createElement('h1')
             winner.textContent = result
+            winner.className = "one"
             container2.appendChild(winner)
 
             } 
     }
     });
 });
+
+function clear() {
+    const container2 = document.querySelector('#container2')
+    const child = container2.querySelectorAll('.one')
+
+    child.forEach((child) => container2.removeChild(child));
+}
