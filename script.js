@@ -14,3 +14,33 @@ function getComputerChoice(){
      }
     return choice2;
 }
+
+function playround(playerPick, computerPick){
+
+    
+
+    if (playerPick.toLowerCase() === computerPick) {
+        
+        return tie;
+
+
+    }
+    else if 
+        (playerPick.toLowerCase() === "rock" && computerPick === "paper" || 
+        playerPick.toLowerCase() === "scissors" && computerPick === "rock" || 
+        playerPick.toLowerCase() === "paper" && computerPick === "scissors") {
+
+        ++computerScore
+        return lose;
+        
+        
+    }
+    else {
+        
+        ++userScore;
+        return win;
+    }
+
+    
+    
+}
