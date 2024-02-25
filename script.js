@@ -22,30 +22,26 @@ function playround(playerPick, computerPick){
     if (playerPick.toLowerCase() === computerPick) {
         
         return tie;
-
-
     }
     else if 
+
         (playerPick.toLowerCase() === "rock" && computerPick === "paper" || 
         playerPick.toLowerCase() === "scissors" && computerPick === "rock" || 
         playerPick.toLowerCase() === "paper" && computerPick === "scissors") {
 
         ++computerScore
-        return lose;
-        
-        
+        return lose; 
     }
     else {
-        
+
         ++userScore;
         return win;
     }
 
-    
-    
 }
 
 function clear() {
+
     const container2 = document.querySelector('#container2')
     const child = container2.querySelectorAll('.one')
 
@@ -62,6 +58,7 @@ let rounds = 0;
 let gameover = false
 let result;
 const buttons = document.querySelectorAll('button');
+
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
