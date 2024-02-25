@@ -1,0 +1,20 @@
+body {
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    background-color: aqua;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+#container2 {
+    width: 200px;
+    height: 600px;
+}

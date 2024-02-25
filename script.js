@@ -65,19 +65,20 @@ buttons.forEach((button) => {
     
     
     const container = document.querySelector('#container')
+    const container2 = document.querySelector('#container2')
 
     const yourScore = document.createElement('div')
     yourScore.textContent = "Your score is " + userScore + " - you chose " + playerPick
-    container.appendChild(yourScore)
+    container2.appendChild(yourScore)
 
     
     const compScore = document.createElement('div')
     compScore.textContent = "Computer score is " + computerScore  + " - they chose " + computerPick
-    container.appendChild(compScore)
+    container2.appendChild(compScore)
 
     const round = document.createElement('div')
     round.textContent = "round " + rounds 
-    container.appendChild(round)
+    container2.appendChild(round)
 
     if (rounds === 5) {
         gameover = true
@@ -97,7 +98,7 @@ buttons.forEach((button) => {
 
             const winner = document.createElement('h1')
             winner.textContent = result
-            container.appendChild(winner)
+            container2.appendChild(winner)
 
             }
             else if (computerScore > userScore) {
@@ -113,7 +114,7 @@ buttons.forEach((button) => {
 
             const winner = document.createElement('h1')
             winner.textContent = result
-            container.appendChild(winner)
+            container2.appendChild(winner)
 
             }
             else if (computerScore === userScore) {
@@ -129,7 +130,7 @@ buttons.forEach((button) => {
 
             const winner = document.createElement('h1')
             winner.textContent = result
-            container.appendChild(winner)
+            container2.appendChild(winner)
 
             } 
     }
