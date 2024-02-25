@@ -75,21 +75,22 @@ buttons.forEach((button) => {
 
     const container2 = document.querySelector('#container2')
 
+    const round = document.createElement('p')
+    round.textContent = "round " + rounds + " "
+    round.className = "one" 
+    container2.appendChild(round)
+
     const yourScore = document.createElement('div')
-    yourScore.textContent = "Your score is " + userScore + " - you chose " + playerPick
+    yourScore.textContent = "Your score is " + userScore + " - you chose " + playerPick + " "
     yourScore.className = "one"
     container2.appendChild(yourScore)
 
     
     const compScore = document.createElement('div')
-    compScore.textContent = "Computer score is " + computerScore  + " - they chose " + computerPick
+    compScore.textContent = "Computer score is " + computerScore  + " - they chose " + computerPick + " "
     compScore.className = "one"
     container2.appendChild(compScore)
 
-    const round = document.createElement('div')
-    round.textContent = "round " + rounds
-    round.className = "one" 
-    container2.appendChild(round)
 
     if (rounds === 5) {
         gameover = true
@@ -107,9 +108,10 @@ buttons.forEach((button) => {
             computerScore = 0
             result = 'You win!'
 
-            const winner = document.createElement('h1')
-            winner.textContent = result
+            const winner = document.createElement('p')
+            winner.textContent = result + " "
             winner.className = "one"
+            winner.setAttribute('id', 'two')
             container2.appendChild(winner)
 
             }
@@ -122,11 +124,12 @@ buttons.forEach((button) => {
             userScore = 0
             computerScore = 0
 
-            result = 'the computer won'
+            result = 'You lose'
 
-            const winner = document.createElement('h1')
-            winner.textContent = result
+            const winner = document.createElement('p')
+            winner.textContent = result + " "
             winner.className = "one"
+            winner.setAttribute('id', 'two')
             container2.appendChild(winner)
 
             }
@@ -141,9 +144,10 @@ buttons.forEach((button) => {
 
             result = 'It is a tie'
 
-            const winner = document.createElement('h1')
-            winner.textContent = result
+            const winner = document.createElement('p')
+            winner.textContent = result + " "
             winner.className = "one"
+            winner.setAttribute('id', 'two')
             container2.appendChild(winner)
 
             } 

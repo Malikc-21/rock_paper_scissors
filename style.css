@@ -7,15 +7,66 @@ body {
 
 #container {
     display: flex;
-    background-color: aqua;
+    gap: 20px;
+    flex-direction: column;
+    background-color: rgb(59, 56, 56);
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-top: 100px;
     width: 400px;
-    height: 500px;
+    height: 600px;
     align-items: center;
     justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #container2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-top: 100px;
-    width: 200px;
+    width: 400px;
     height: 600px;
+    background-color: rgb(59, 56, 56);
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    flex-shrink: 0;
 }
+
+button {
+    font-size: larger;
+    display: flex;
+    height: 100px;
+    width: 200px;
+    
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 4px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: 900;
+    background-color: rgb(71, 70, 70);
+    color: wheat;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.one {
+    padding-left: 6px;
+    color: white;
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+
+p {
+    font-size: 20px !important;
+    font-weight: 900;
+}
+
+#two {
+    font-size: 50px !important;
+}
+
